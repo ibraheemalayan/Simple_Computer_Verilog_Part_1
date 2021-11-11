@@ -1,8 +1,12 @@
 # Simple Computer In Verilog
 
-> project 1 in the computer organization course (ENCS2380) at Birzeit University
+project 1 in the computer organization course (ENCS2380) at Birzeit University
+
+------------------------------
 
 ## [Project Paper](./ENCS2380_Project_1.pdf)
+
+------------------------------
 
 ## Modules
 
@@ -18,6 +22,8 @@ verilog description of a sample clock generator that inverts the clock signal ea
 * [Test_Bench.v](./modules/Test_Bench.v)
 the test bench that connects the modules and is the top level file in the simulation        
 
+------------------------------
+
 ## Running The Simulation
 
 > to run the below code you need to have [Icarus Verilog](https://github.com/steveicarus/iverilog)
@@ -28,6 +34,26 @@ cd Simple_Computer_Verilog_Part_1/modules
 iverilog -o compiled_testbench.vvp Test_Bench.v
 vvp compiled_testbench.vvp
 ```
+
+------------------------------
+
+## Discussion
+
+The instructions were executed successfully.   
+
+``` (instruction) Load R1, [30] ```
+* the value `5` was loaded from memory address `30` to register `R1` in the CPU.     
+
+``` (instruction) Add R1, [31] ```
+* the value `8` was loaded from memory address `31` and added to the value of register `R1` which is `5`, then the result of the addition (`13`) was saved in the same register.     
+
+``` (instruction) Store R1, [32] ```
+* the value `13` of the register `R1` was stored on memory address `32`.    
+
+* **The output `(200) > test > cell[70] > d` at time 190 ns proves that the simulation was successfull since the value of memory location 32 is the hexadecimal D, 13 in decimal which is the expected output (this output is generated at line 69 in [MEM.v](./modules/MEM.v))**
+
+------------------------------
+
 
 ## Sample Run Output
 
@@ -370,18 +396,3 @@ ibraheemalyan@Ibraheems-MacBook-Pro modules % vvp compiled_testbench.vvp
 
 
 ```
-
-## Discussion
-
-The instructions were executed successfully.   
-
-``` (instruction) Load R1, [30] ```
-* the value `5` was loaded from memory address `30` to register `R1` in the CPU.     
-
-``` (instruction) Add R1, [31] ```
-* the value `8` was loaded from memory address `31` and added to the value of register `R1` which is `5`, then the result of the addition (`13`) was saved in the same register.     
-
-``` (instruction) Store R1, [32] ```
-* the value `13` of the register `R1` was stored on memory address `32`.    
-
-* **The output `(190) > test > cell[32] > d` at time 190 ns proves that the simulation was successfull since the value of memory location 32 is the hexadecimal D, 13 in decimal which is the expected output (this output is generated at line 69 in [MEM.v](./modules/MEM.v))**
