@@ -4,7 +4,7 @@ project 1 in the computer organization course (ENCS2380) at Birzeit University
 
 ------------------------------
 
-## [Project Paper](./ENCS2380_Project_1.pdf)
+## [Project Paper](https://drive.google.com/file/d/1CynuBT3mAd_htxdpWnm3OeJVcPVh-bn9/view?usp=sharing)
 
 ------------------------------
 
