@@ -31,6 +31,9 @@ end
 
 initial begin
 
+    $dumpfile("waves.vcd");
+    $dumpvars(0, TestBench);
+
     $display("(%0t) > running the test bench ...", $time);
 
     #220 $display("(%0t) > finishing simulation\n\n", $time);

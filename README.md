@@ -35,6 +35,11 @@ iverilog -o compiled_testbench.vvp Test_Bench.v
 vvp compiled_testbench.vvp
 ```
 
+Then you can read the output of the display statments     
+**OR**     
+open the [waves.vcd](./modules/waves.vcd) using a wave viewer (eg: GTKwave)    
+
+
 ------------------------------
 
 ## Discussion
@@ -57,7 +62,7 @@ All the instructions were executed successfully.
 ------------------------------
 
 
-## Sample Run Output
+## Run Output (text)
 
 > output of running the compiled Test_Bench
 
@@ -398,3 +403,10 @@ ibraheemalyan@Ibraheems-MacBook-Pro modules % vvp compiled_testbench.vvp
 
 
 ```
+
+
+## Simulation waveform on GTKwave
+
+> Note: all the values below are in hexadecimal
+
+![waveform on GTKwave](./img/waves.png)
