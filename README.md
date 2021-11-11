@@ -1,3 +1,5 @@
+View Rendered README on Github [https://github.com/ibraheemalayan/Simple_Computer_Verilog_Part_1](https://github.com/ibraheemalayan/Simple_Computer_Verilog_Part_1.git)
+
 # Simple Computer In Verilog
 
 project 1 in the computer organization course (ENCS2380) at Birzeit University
