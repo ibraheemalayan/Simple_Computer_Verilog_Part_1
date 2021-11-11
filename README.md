@@ -61,6 +61,25 @@ All the instructions were executed successfully.
 
 ------------------------------
 
+## Simulation waveform on GTKwave
+
+> Note: all the values below are in hexadecimal
+
+![waveform on GTKwave](./img/waves.png)
+
+[raw high quality image](https://raw.githubusercontent.com/ibraheemalayan/Simple_Computer_Verilog_Part_1/master/img/waves.png)
+
+#### Another Screenshot with decimal addresses
+
+address registers (MAR, PC) data formats are decimal, other signals are hexadecimal
+
+![decimal addr waveform on GTKwave](./img/decimal_addresses_waves.png)
+
+[raw high quality image](https://raw.githubusercontent.com/ibraheemalayan/Simple_Computer_Verilog_Part_1/master/img/decimal_addresses_waves.png)
+
+
+------------------------------
+
 
 ## Run Output (text)
 
@@ -403,20 +422,3 @@ ibraheemalyan@Ibraheems-MacBook-Pro modules % vvp compiled_testbench.vvp
 
 
 ```
-
-
-## Simulation waveform on GTKwave
-
-> Note: all the values below are in hexadecimal
-
-![waveform on GTKwave](./img/waves.png)
-
-[raw image](https://raw.githubusercontent.com/ibraheemalayan/Simple_Computer_Verilog_Part_1/master/img/waves.png)
-
-#### Another Screenshot with decimal addresses
-
-address registers (MAR, PC) data formats are decimal, other signals are hexadecimal
-
-![decimal addr waveform on GTKwave](./img/decimal_addresses_waves.png)
-
-[raw image](https://raw.githubusercontent.com/ibraheemalayan/Simple_Computer_Verilog_Part_1/master/img/decimal_addresses_waves.png)
