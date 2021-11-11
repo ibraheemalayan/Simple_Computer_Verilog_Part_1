@@ -411,7 +411,7 @@ ibraheemalyan@Ibraheems-MacBook-Pro modules % vvp compiled_testbench.vvp
 
 ![waveform on GTKwave](./img/waves.png)
 
-[raw image](https://raw.githubusercontent.com/ibraheemalayan/Simple_Computer_Verilog_Part_1/751105ac05ef246b8a0e97a902b0fc68480ce151/img/waves.png)
+[raw image](https://raw.githubusercontent.com/ibraheemalayan/Simple_Computer_Verilog_Part_1/master/img/waves.png)
 
 #### Another Screenshot with decimal addresses
 
@@ -419,4 +419,4 @@ address registers (MAR, PC) data formats are decimal, other signals are hexadeci
 
 ![decimal addr waveform on GTKwave](./img/decimal_addresses_waves.png)
 
-[raw image](https://raw.githubusercontent.com/ibraheemalayan/Simple_Computer_Verilog_Part_1/751105ac05ef246b8a0e97a902b0fc68480ce151/img/decimal_addresses_waves.png)
+[raw image](https://raw.githubusercontent.com/ibraheemalayan/Simple_Computer_Verilog_Part_1/master/img/decimal_addresses_waves.png)
