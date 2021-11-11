@@ -11,13 +11,13 @@ project 1 in the computer organization course (ENCS2380) at Birzeit University
 ## Modules
 
 * [CPU.v](./modules/CPU.v)
-verilog description of the CPU module in the system, can execute the 3 instructions
+CPU module that can execute the 3 instructions
 
 * [MEM.v](./modules/MEM.v)
-verilog description of a 256 byte memory (128 cells each is 2 bytes)    
+a 256 byte memory (128 cells each is 2 bytes)    
 
 * [CLK_GEN.v](./modules/CLK_GEN.v)
-verilog description of a sample clock generator that inverts the clock signal each 5 ns (full cycle is 10 ns)    
+a sample clock generator that inverts the clock signal each 5 ns (full cycle is 10 ns)    
 
 * [Test_Bench.v](./modules/Test_Bench.v)
 the test bench that connects the modules and is the top level file in the simulation        
@@ -26,7 +26,7 @@ the test bench that connects the modules and is the top level file in the simula
 
 ## Running The Simulation
 
-> to run the below code you need to have [Icarus Verilog](https://github.com/steveicarus/iverilog)
+install [Icarus Verilog](https://github.com/steveicarus/iverilog) and add its binaries to your shell path then run the following
 
 ```
 git clone https://github.com/ibraheemalayan/Simple_Computer_Verilog_Part_1.git
@@ -39,7 +39,8 @@ vvp compiled_testbench.vvp
 
 ## Discussion
 
-The instructions were executed successfully.   
+All the instructions were executed successfully.    
+
 
 ``` (instruction) Load R1, [30] ```
 * the value `5` was loaded from memory address `30` to register `R1` in the CPU.     
@@ -51,6 +52,7 @@ The instructions were executed successfully.
 * the value `13` of the register `R1` was stored on memory address `32`.    
 
 * **The output `(200) > test > cell[70] > d` at time 190 ns proves that the simulation was successfull since the value of memory location 32 is the hexadecimal D, 13 in decimal which is the expected output (this output is generated at line 69 in [MEM.v](./modules/MEM.v))**
+
 
 ------------------------------
 

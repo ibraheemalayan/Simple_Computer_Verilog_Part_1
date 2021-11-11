@@ -34,7 +34,7 @@ reg [2:0] state;
 
 // states
 parameter 
-    get_instruction_addr = 0,
+    copy_pc_to_mar = 0,
     fetch_instruction = 1,
     decode_instruction = 2,
     fetch_operand = 3,
@@ -64,12 +64,12 @@ end
 
 always @(posedge clk ) begin
 
-    #2;
+    #2; // just to organize the output of display statements
 
     case (state)
 
         // 0: get instruction address from PC and put it in MAR (and send a read signal to the memory)
-        get_instruction_addr: begin
+        copy_pc_to_mar: begin
 
             $display("\n ~~~~~~~~~~~~~~ New Instruction Cycle ~~~~~~~~~~~~~~ \n");
 
@@ -146,21 +146,21 @@ always @(posedge clk ) begin
 
             Mem_EN=0;
 
-            case (IR[15:12]) // determine operation based on opcode
+            case (IR[15:12]) // determine operation based on opcode which is bits 12-15 according to our format
 
-                // add Ri to MBR_in and save in Ri
+                // perform the addition of Ri to MDR_in and save the sum in Ri
                 add : begin
                     Registar [ IR[11:8] ] <= Registar [ IR[11:8] ] + MBR_in;
                     state = 0;
                 end
 
-                // load MBR to Ri
+                // copy the value of the Memory Buffer Register to Ri
                 load : begin
                     Registar [ IR[11:8] ] <= MBR_in;
                     state = 0;
                 end
 
-                // copy Ri to MBR_out and send write signal to memory to store it
+                // copy Ri to MBR_out and send enable, write signals to the memory to store it
                 store : begin
                     MBR_out <= Registar [ IR[11:8] ];
                     Mem_EN=1;
@@ -170,7 +170,7 @@ always @(posedge clk ) begin
 
                 default: begin
                     Mem_EN=0;
-                    state = 5; // raise some exception (unknown opcode)
+                    state = 5; // TODO raise some exception (unknown opcode)
                     $display("(%0t) Unknown Opcode !", $time);
                 end
                     
